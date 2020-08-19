@@ -1,5 +1,5 @@
-# TCExtensions
-When a UITableView or UICollectionView page contains multiple types of cells, registering and configuring the cells requires writing a lot of boilerplate code. TCExtensions simplifies these processes by adding extensions to UITableView and UICollectionView.
+# YLExtensions
+When a UITableView or UICollectionView page contains multiple types of cells, registering and configuring the cells requires writing a lot of boilerplate code. YLExtensions simplifies these processes by adding extensions to UITableView and UICollectionView.
 
 
 
@@ -15,10 +15,10 @@ When a UITableView or UICollectionView page contains multiple types of cells, re
 
 ### Cocoapods
 
-To integrate TCExtensions into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate YLExtensions into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'TCExtensions'
+pod 'YLExtensions'
 ```
 
 Run `pod install` to build your dependencies.
@@ -30,9 +30,9 @@ Run `pod install` to build your dependencies.
 In SomeModel.swift:
 
 ```swift
-import TCExtensions
+import YLExtensions
 
-// Let the SomeModel adopts and conforms to the ModelType protocol
+// Let SomeModel adopts and conforms to the ModelType protocol
 extension SomeModel: ModelType {
     var tCells: [UITableViewCell.Type]? {
         [ACell.self, BCell.self]
@@ -43,6 +43,7 @@ extension SomeModel: ModelType {
     }
     
     var tAll: [UITableViewCell.Type]? {
+        // Sort by display order
         [ACell.self, BCell.self, CCell.self, DCell.self]
     }
     
@@ -67,7 +68,7 @@ class SomeCell: UITableViewCell {
 In SomeViewController.swift:
 
 ```swift
-import TCExtensions
+import YLExtensions
 
 // 1. Create a model object
 let someModel = SomeModel(someA: [A], someB: [B], someC: [C], someD: [D])
