@@ -1,5 +1,5 @@
 # YLExtensions
-When a UITableView or UICollectionView page contains multiple types of cells, registering and configuring the cells requires writing a lot of boilerplate code. YLExtensions simplifies these processes by adding extensions to UITableView and UICollectionView.
+Using YLEXtensions could get you out of massive boilerplate code when you want to register , configure a UITableView or UICollectionView page which contains multiple types of cells.
 
 
 
@@ -73,7 +73,7 @@ import YLExtensions
 // 1. Create a model object
 let someModel = SomeModel(someA: [A], someB: [B], someC: [C], someD: [D])
 
-// 2. Register cell
+// 2. Register cells
 override func viewDidLoad() {
     super.viewDidLoad()
     ...
@@ -81,8 +81,7 @@ override func viewDidLoad() {
     tableView.registerNibs(with: someModel.tNibs!)
 }
 
-// 3. Unified creation and configuration of cells
-// Note: You can only write that if cells of the same species are all together!
+// 3. Create and configure cells
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(for: indexPath, with: someModel.tAll!)
     cell.configure(someModel.data![indexPath.section][indexPath.row])
