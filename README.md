@@ -1,5 +1,5 @@
 # YLExtensions
-Using YLEXtensions could get you out of massive boilerplate code when you want to register , configure a UITableView or UICollectionView page which contains multiple types of cells.
+Using YLEXtensions could get you out of massive boilerplate code when you want to register, configure a UITableView or UICollectionView page which contains multiple types of cells.
 
 
 
@@ -83,6 +83,7 @@ override func viewDidLoad() {
 
 // 3. Create and configure cells
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    // Note: Only applies when cells of the same type are all together and the different types of cells are in different section.
     let cell = tableView.dequeueReusableCell(for: indexPath, with: someModel.tAll!)
     cell.configure(someModel.data![indexPath.section][indexPath.row])
     return cell
