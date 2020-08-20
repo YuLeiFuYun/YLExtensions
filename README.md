@@ -94,4 +94,4 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 ## License
 
-TCExtensions is released under the MIT license. See LICENSE for details.
+YLExtensions is released under the MIT license. See LICENSE for details.
