@@ -33,23 +33,7 @@
 		4E62D5DD24EC31B000F8BAA0 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E62D5D924EC31B000F8BAA0 /* d.jpg */; };
 		4E62D5DE24EC31B000F8BAA0 /* c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E62D5DA24EC31B000F8BAA0 /* c.jpg */; };
 		4E62D5DF24EC31B000F8BAA0 /* b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E62D5DB24EC31B000F8BAA0 /* b.jpg */; };
-		4E62D5EE24EC40A700F8BAA0 /* YLExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62D5ED24EC40A700F8BAA0 /* YLExtensions.framework */; };
-		4E62D5EF24EC40A700F8BAA0 /* YLExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62D5ED24EC40A700F8BAA0 /* YLExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4E62D5F024EC40A700F8BAA0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4E62D5EF24EC40A700F8BAA0 /* YLExtensions.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4E62D58D24EC2A8700F8BAA0 /* YLExtensions-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YLExtensions-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E62D5EE24EC40A700F8BAA0 /* YLExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +207,6 @@
 				4E62D58924EC2A8700F8BAA0 /* Sources */,
 				4E62D58A24EC2A8700F8BAA0 /* Frameworks */,
 				4E62D58B24EC2A8700F8BAA0 /* Resources */,
-				4E62D5F024EC40A700F8BAA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
