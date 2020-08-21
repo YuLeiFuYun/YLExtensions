@@ -6,7 +6,6 @@ Using YLEXtensions could get you out of massive boilerplate code when you want t
 ## Requirements
 
 * iOS 13.0+
-* Xcode 11+
 * Swift 5.1+
 
 
@@ -22,6 +21,10 @@ pod 'YLExtensions'
 ```
 
 Run `pod install` to build your dependencies.
+
+### Swift Package Manager
+
+Select File > Swift Packages > Add Package Dependency. Enter `https://github.com/YuLeiFuYun/YLExtensions.git` in the "Choose Package Repository" dialog.
 
 
 
