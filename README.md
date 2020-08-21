@@ -17,7 +17,15 @@ Using YLEXtensions could get you out of massive boilerplate code when you want t
 To integrate YLExtensions into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'YLExtensions'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '13.0'
+use_frameworks!
+
+target 'MyApp' do
+  # your other pod
+  # ...
+  pod 'YLExtensions'
+end
 ```
 
 Run `pod install` to build your dependencies.
