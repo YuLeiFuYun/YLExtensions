@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E07AAD424F0B00100058345 /* YLExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 4E07AAD324F0B00100058345 /* YLExtensions */; };
 		4E62D59124EC2A8700F8BAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62D59024EC2A8700F8BAA0 /* AppDelegate.swift */; };
 		4E62D59324EC2A8700F8BAA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62D59224EC2A8700F8BAA0 /* SceneDelegate.swift */; };
 		4E62D59824EC2A8700F8BAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E62D59624EC2A8700F8BAA0 /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E07AAD424F0B00100058345 /* YLExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +215,9 @@
 			dependencies = (
 			);
 			name = "YLExtensions-Demo";
+			packageProductDependencies = (
+				4E07AAD324F0B00100058345 /* YLExtensions */,
+			);
 			productName = "YLExtensions-Demo";
 			productReference = 4E62D58D24EC2A8700F8BAA0 /* YLExtensions-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 4E62D58424EC2A8700F8BAA0;
+			packageReferences = (
+				4E07AAD224F0B00100058345 /* XCRemoteSwiftPackageReference "YLExtensions" */,
+			);
 			productRefGroup = 4E62D58E24EC2A8700F8BAA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -495,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4E07AAD224F0B00100058345 /* XCRemoteSwiftPackageReference "YLExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/YuLeiFuYun/YLExtensions.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4E07AAD324F0B00100058345 /* YLExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E07AAD224F0B00100058345 /* XCRemoteSwiftPackageReference "YLExtensions" */;
+			productName = YLExtensions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E62D58524EC2A8700F8BAA0 /* Project object */;
 }

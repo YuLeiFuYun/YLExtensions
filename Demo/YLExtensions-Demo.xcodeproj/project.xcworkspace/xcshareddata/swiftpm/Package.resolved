@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "YLExtensions",
+        "repositoryURL": "https://github.com/YuLeiFuYun/YLExtensions.git",
+        "state": {
+          "branch": null,
+          "revision": "bca13a5b9c737288b12beea0550c23fc3f5958c4",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
