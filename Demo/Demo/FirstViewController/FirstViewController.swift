@@ -64,7 +64,7 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath, with: firstModel.tAll!)
+        let cell = tableView.dequeueReusableCell(for: indexPath, with: FirstModel.tAll!)
         cell.configure(firstModel.data![indexPath.section][indexPath.row])
         return cell
     }

@@ -14,19 +14,19 @@ struct SecondModel {
 }
 
 extension SecondModel: ModelType {
-    var cCells: [UICollectionViewCell.Type]? {
+    static var cCells: [UICollectionViewCell.Type]? {
         [ColorCell.self]
     }
     
-    var cNibs: [UICollectionViewCell.Type]? {
+    static var cNibs: [UICollectionViewCell.Type]? {
         [ImageCell.self]
     }
     
-    var cAll: [UICollectionViewCell.Type]? {
+    static var cAll: [UICollectionViewCell.Type]? {
         [ImageCell.self, ColorCell.self]
     }
     
-    var headViews: [UICollectionReusableView.Type]? {
+    static var headViews: [UICollectionReusableView.Type]? {
         [HeadView.self]
     }
     

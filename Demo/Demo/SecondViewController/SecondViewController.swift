@@ -43,7 +43,7 @@ class SecondViewController: UIViewController {
 
         collectionView.registerCells(with: SecondModel.cCells!)
         collectionView.registerNibs(with: SecondModel.cNibs!)
-        collectionView.registerHeaders(with: secondModel.headViews!)
+        collectionView.registerHeaders(with: SecondModel.headViews!)
         
         view.addSubview(collectionView)
     }
@@ -60,7 +60,7 @@ extension SecondViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(for: indexPath, with: secondModel.cAll!)
+        let cell = collectionView.dequeueReusableCell(for: indexPath, with: SecondModel.cAll!)
         cell.configure(secondModel.data![indexPath.section][indexPath.row])
         return cell
     }

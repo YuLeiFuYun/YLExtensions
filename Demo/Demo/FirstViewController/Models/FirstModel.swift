@@ -15,15 +15,15 @@ struct FirstModel {
 }
 
 extension FirstModel: ModelType {
-    var tCells: [UITableViewCell.Type]? {
+    static var tCells: [UITableViewCell.Type]? {
         [TextCell.self, LinkCell.self]
     }
     
-    var tNibs: [UITableViewCell.Type]? {
+    static var tNibs: [UITableViewCell.Type]? {
         [EmojiCell.self]
     }
     
-    var tAll: [UITableViewCell.Type]? {
+    static var tAll: [UITableViewCell.Type]? {
         [TextCell.self, LinkCell.self, EmojiCell.self]
     }
     
