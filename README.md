@@ -45,15 +45,15 @@ import YLExtensions
 
 // Let SomeModel adopts and conforms to the ModelType protocol
 extension SomeModel: ModelType {
-    var tCells: [UITableViewCell.Type]? {
+    static var tCells: [UITableViewCell.Type]? {
         [ACell.self, BCell.self]
     }
     
-    var tNibs: [UITableViewCell.Type]? {
+    static var tNibs: [UITableViewCell.Type]? {
         [CCell.self, DCell.self]
     }
     
-    var tAll: [UITableViewCell.Type]? {
+    static var tAll: [UITableViewCell.Type]? {
         // Sort by display order
         [ACell.self, BCell.self, CCell.self, DCell.self]
     }
@@ -88,14 +88,14 @@ let someModel = SomeModel(someA: [A], someB: [B], someC: [C], someD: [D])
 override func viewDidLoad() {
     super.viewDidLoad()
     ...
-    tableView.registerCells(with: someModel.tCells!)
-    tableView.registerNibs(with: someModel.tNibs!)
+    tableView.registerCells(with: SomeModel.tCells!)
+    tableView.registerNibs(with: SomeModel.tNibs!)
 }
 
 // 3. Create and configure cells
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // Note: Only applies when cells of the same type are all together and the different types of cells are in different section.
-    let cell = tableView.dequeueReusableCell(for: indexPath, with: someModel.tAll!)
+    let cell = tableView.dequeueReusableCell(for: indexPath, with: SomeModel.tAll!)
     cell.configure(someModel.data![indexPath.section][indexPath.row])
     return cell
 }
