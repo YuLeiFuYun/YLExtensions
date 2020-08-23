@@ -41,8 +41,8 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.registerCells(with: secondModel.cCells!)
-        collectionView.registerNibs(with: secondModel.cNibs!)
+        collectionView.registerCells(with: SecondModel.cCells!)
+        collectionView.registerNibs(with: SecondModel.cNibs!)
         collectionView.registerHeaders(with: secondModel.headViews!)
         
         view.addSubview(collectionView)

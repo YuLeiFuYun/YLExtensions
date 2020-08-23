@@ -46,8 +46,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.registerCells(with: firstModel.tCells!)
-        tableView.registerNibs(with: firstModel.tNibs!)
+        tableView.registerCells(with: FirstModel.tCells!)
+        tableView.registerNibs(with: FirstModel.tNibs!)
         
         tableView.rowHeight = 80
     }

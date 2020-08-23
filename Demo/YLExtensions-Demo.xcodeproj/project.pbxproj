@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E07AAD424F0B00100058345 /* YLExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 4E07AAD324F0B00100058345 /* YLExtensions */; };
 		4E62D59124EC2A8700F8BAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62D59024EC2A8700F8BAA0 /* AppDelegate.swift */; };
 		4E62D59324EC2A8700F8BAA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62D59224EC2A8700F8BAA0 /* SceneDelegate.swift */; };
 		4E62D59824EC2A8700F8BAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E62D59624EC2A8700F8BAA0 /* Main.storyboard */; };
@@ -75,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E07AAD424F0B00100058345 /* YLExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +214,6 @@
 			);
 			name = "YLExtensions-Demo";
 			packageProductDependencies = (
-				4E07AAD324F0B00100058345 /* YLExtensions */,
 			);
 			productName = "YLExtensions-Demo";
 			productReference = 4E62D58D24EC2A8700F8BAA0 /* YLExtensions-Demo.app */;
@@ -246,7 +243,6 @@
 			);
 			mainGroup = 4E62D58424EC2A8700F8BAA0;
 			packageReferences = (
-				4E07AAD224F0B00100058345 /* XCRemoteSwiftPackageReference "YLExtensions" */,
 			);
 			productRefGroup = 4E62D58E24EC2A8700F8BAA0 /* Products */;
 			projectDirPath = "";
@@ -452,7 +448,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yu-Lei-Fu-Yun.YLExtensions-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -473,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yu-Lei-Fu-Yun.YLExtensions-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -503,25 +499,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4E07AAD224F0B00100058345 /* XCRemoteSwiftPackageReference "YLExtensions" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/YuLeiFuYun/YLExtensions.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4E07AAD324F0B00100058345 /* YLExtensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4E07AAD224F0B00100058345 /* XCRemoteSwiftPackageReference "YLExtensions" */;
-			productName = YLExtensions;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E62D58524EC2A8700F8BAA0 /* Project object */;
 }
