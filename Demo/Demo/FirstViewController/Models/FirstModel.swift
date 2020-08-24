@@ -8,13 +8,23 @@
 import UIKit
 import YLExtensions
 
-struct FirstModel {
+struct FirstModel: ModelType {
     let texts: [Text]
     let links: [Link]
     let emojis: [Emoji]
+    
+    var data: [[Any]]?
+    
+    init(texts: [Text], links: [Link], emojis: [Emoji]) {
+        self.texts = texts
+        self.links = links
+        self.emojis = emojis
+        
+        data = [texts, links, emojis]
+    }
 }
 
-extension FirstModel: ModelType {
+extension FirstModel {
     static var tCells: [UITableViewCell.Type]? {
         [TextCell.self, LinkCell.self]
     }
@@ -25,9 +35,5 @@ extension FirstModel: ModelType {
     
     static var tAll: [UITableViewCell.Type]? {
         [TextCell.self, LinkCell.self, EmojiCell.self]
-    }
-    
-    var data: [[Any]]? {
-        [texts, links, emojis]
     }
 }

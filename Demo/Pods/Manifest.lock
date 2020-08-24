@@ -1,0 +1,16 @@
+PODS:
+  - YLExtensions (1.2.1)
+
+DEPENDENCIES:
+  - YLExtensions
+
+SPEC REPOS:
+  trunk:
+    - YLExtensions
+
+SPEC CHECKSUMS:
+  YLExtensions: a182a96d9685aae302023cf565c56f65991fc8fb
+
+PODFILE CHECKSUM: 88440193354b2e55410a85a1419d32fe87874480
+
+COCOAPODS: 1.9.3

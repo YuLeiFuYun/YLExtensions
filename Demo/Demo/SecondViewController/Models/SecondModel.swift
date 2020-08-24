@@ -8,12 +8,21 @@
 import UIKit
 import YLExtensions
 
-struct SecondModel {
+struct SecondModel: ModelType {
     let images: [Image]
     let colors: [Color]
+    
+    var data: [[Any]]?
+    
+    init(images: [Image], colors: [Color]) {
+        self.images = images
+        self.colors = colors
+        
+        data = [images, colors]
+    }
 }
 
-extension SecondModel: ModelType {
+extension SecondModel {
     static var cCells: [UICollectionViewCell.Type]? {
         [ColorCell.self]
     }
@@ -28,9 +37,5 @@ extension SecondModel: ModelType {
     
     static var headViews: [UICollectionReusableView.Type]? {
         [HeadView.self]
-    }
-    
-    var data: [[Any]]? {
-        [images, colors]
     }
 }
