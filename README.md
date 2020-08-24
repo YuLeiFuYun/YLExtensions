@@ -44,7 +44,25 @@ In SomeModel.swift:
 import YLExtensions
 
 // Let SomeModel adopts and conforms to the ModelType protocol
-extension SomeModel: ModelType {
+struct SomeModel: ModelType {
+    let someA: [A]
+    let someB: [B]
+    let someC: [C]
+    let someD: [D]
+    
+    var data: [[Any]]?
+    
+    init(someA: [A], someB: [B], someC: [C], someD: [D]) {
+        self.someA = someA
+        self.someB = someB
+        self.someC = someC
+        self.someD = someD
+        
+        data = [someA, someB, someC, someD]
+    }
+}
+
+extension SomeModel {
     static var tCells: [UITableViewCell.Type]? {
         [ACell.self, BCell.self]
     }
@@ -56,10 +74,6 @@ extension SomeModel: ModelType {
     static var tAll: [UITableViewCell.Type]? {
         // Sort by display order
         [ACell.self, BCell.self, CCell.self, DCell.self]
-    }
-    
-    var data: [[Any]]? {
-        [someA, someB, someC, someD]
     }
 }
 ```
