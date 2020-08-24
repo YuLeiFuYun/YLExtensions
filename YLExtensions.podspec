@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YLExtensions"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "Make UITableView and UICollectionView easier to use."
   s.homepage     = "https://github.com/YuLeiFuYun/YLExtensions"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
