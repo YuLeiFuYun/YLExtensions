@@ -64,15 +64,17 @@ struct SomeModel: ModelType {
 
 extension SomeModel {
     static var tCells: [UITableViewCell.Type]? {
+        // All cell types created by pure code.
         [ACell.self, BCell.self]
     }
     
     static var tNibs: [UITableViewCell.Type]? {
+        // All cell types created by nib.
         [CCell.self, DCell.self]
     }
     
     static var tAll: [UITableViewCell.Type]? {
-        // Sort by display order
+        // All cell types, Sort by display order.
         [ACell.self, BCell.self, CCell.self, DCell.self]
     }
 }
@@ -96,7 +98,7 @@ In SomeViewController.swift:
 import YLExtensions
 
 // 1. Create a model object
-let someModel = SomeModel(someA: [A], someB: [B], someC: [C], someD: [D])
+let someModel = SomeModel(...)
 
 // 2. Register cells
 override func viewDidLoad() {
