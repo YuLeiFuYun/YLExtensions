@@ -25,7 +25,7 @@ public protocol ModelType: Pageable {
     static var footerNibs: [UICollectionReusableView.Type]? { get }
     
     // Store model data in display order
-    var data: [[Any]]? { get }
+    var data: [[Any]]? { get set }
 }
 
 extension ModelType {
@@ -40,6 +40,4 @@ extension ModelType {
     public static var footerViews: [UICollectionReusableView.Type]? { nil }
     public static var headerNibs: [UICollectionReusableView.Type]? { nil }
     public static var footerNibs: [UICollectionReusableView.Type]? { nil }
-    
-    public var data: [[Any]]? { nil }
 }
