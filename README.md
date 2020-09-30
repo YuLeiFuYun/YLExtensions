@@ -45,6 +45,8 @@ import YLExtensions
 
 // Let SomeModel adopts and conforms to the ModelType protocol
 struct SomeModel: ModelType {
+    typealias Value = Never
+    
     let someA: [A]
     let someB: [B]
     let someC: [C]
