@@ -9,18 +9,14 @@ import UIKit
 import YLExtensions
 
 struct FirstModel: ModelType {
+    typealias Value = Never
+    
     let texts: [Text]
     let links: [Link]
     let emojis: [Emoji]
     
-    var data: [[Any]]?
-    
-    init(texts: [Text], links: [Link], emojis: [Emoji]) {
-        self.texts = texts
-        self.links = links
-        self.emojis = emojis
-        
-        data = [texts, links, emojis]
+    var data: [[Any]] {
+        return [texts, links, emojis]
     }
 }
 

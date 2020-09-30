@@ -56,16 +56,16 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        firstModel.data!.count
+        firstModel.data.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        firstModel.data![section].count
+        firstModel.data[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, with: FirstModel.tAll!)
-        cell.configure(firstModel.data![indexPath.section][indexPath.row])
+        cell.configure(firstModel.data[indexPath.section][indexPath.row])
         return cell
     }
 }

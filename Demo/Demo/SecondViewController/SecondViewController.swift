@@ -52,16 +52,16 @@ class SecondViewController: UIViewController {
 
 extension SecondViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        secondModel.data!.count
+        secondModel.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        secondModel.data![section].count
+        secondModel.data[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath, with: SecondModel.cAll!)
-        cell.configure(secondModel.data![indexPath.section][indexPath.row])
+        cell.configure(secondModel.data[indexPath.section][indexPath.row])
         return cell
     }
     

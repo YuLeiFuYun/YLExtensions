@@ -9,16 +9,13 @@ import UIKit
 import YLExtensions
 
 struct SecondModel: ModelType {
+    typealias Value = Never
+    
     let images: [Image]
     let colors: [Color]
     
-    var data: [[Any]]?
-    
-    init(images: [Image], colors: [Color]) {
-        self.images = images
-        self.colors = colors
-        
-        data = [images, colors]
+    var data: [[Any]] {
+        return [images, colors]
     }
 }
 

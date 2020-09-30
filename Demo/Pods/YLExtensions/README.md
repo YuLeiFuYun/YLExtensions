@@ -44,22 +44,31 @@ In SomeModel.swift:
 import YLExtensions
 
 // Let SomeModel adopts and conforms to the ModelType protocol
-extension SomeModel: ModelType {
+struct SomeModel: ModelType {
+    let someA: [A]
+    let someB: [B]
+    let someC: [C]
+    let someD: [D]
+    
+    var data: [[Any]] {
+        return [someA, someB, someC, someD]
+    }
+}
+
+extension SomeModel {
     static var tCells: [UITableViewCell.Type]? {
+        // All cell types created by pure code.
         [ACell.self, BCell.self]
     }
     
     static var tNibs: [UITableViewCell.Type]? {
+        // All cell types created by nib.
         [CCell.self, DCell.self]
     }
     
     static var tAll: [UITableViewCell.Type]? {
-        // Sort by display order
+        // All cell types, Sort by display order.
         [ACell.self, BCell.self, CCell.self, DCell.self]
-    }
-    
-    var data: [[Any]]? {
-        [someA, someB, someC, someD]
     }
 }
 ```
@@ -82,7 +91,7 @@ In SomeViewController.swift:
 import YLExtensions
 
 // 1. Create a model object
-let someModel = SomeModel(someA: [A], someB: [B], someC: [C], someD: [D])
+let someModel = SomeModel(...)
 
 // 2. Register cells
 override func viewDidLoad() {
@@ -96,7 +105,7 @@ override func viewDidLoad() {
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // Note: Only applies when cells of the same type are all together and the different types of cells are in different section.
     let cell = tableView.dequeueReusableCell(for: indexPath, with: SomeModel.tAll!)
-    cell.configure(someModel.data![indexPath.section][indexPath.row])
+    cell.configure(someModel.data[indexPath.section][indexPath.row])
     return cell
 }
 ```

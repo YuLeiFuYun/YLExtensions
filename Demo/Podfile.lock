@@ -1,5 +1,5 @@
 PODS:
-  - YLExtensions (1.2.1)
+  - YLExtensions (2.0.0)
 
 DEPENDENCIES:
   - YLExtensions
@@ -9,7 +9,7 @@ SPEC REPOS:
     - YLExtensions
 
 SPEC CHECKSUMS:
-  YLExtensions: a182a96d9685aae302023cf565c56f65991fc8fb
+  YLExtensions: beb4ac98634e650c8b93b911a0ea2ff4c7536480
 
 PODFILE CHECKSUM: 88440193354b2e55410a85a1419d32fe87874480
 
