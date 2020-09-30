@@ -8,6 +8,8 @@
 import UIKit
 
 public protocol ModelType: Pageable {
+    associatedtype Value
+    
     // to be registered table view cell
     static var tCells: [UITableViewCell.Type]? { get }
     static var tNibs: [UITableViewCell.Type]? { get }
@@ -24,8 +26,10 @@ public protocol ModelType: Pageable {
     static var headerNibs: [UICollectionReusableView.Type]? { get }
     static var footerNibs: [UICollectionReusableView.Type]? { get }
     
+    var pageablePropertyPath: WritableKeyPath<Self, [Value]>? { get }
+    
     // Store model data in display order
-    var data: [[Any]]? { get set }
+    var data: [[Any]] { get }
 }
 
 extension ModelType {
@@ -40,4 +44,6 @@ extension ModelType {
     public static var footerViews: [UICollectionReusableView.Type]? { nil }
     public static var headerNibs: [UICollectionReusableView.Type]? { nil }
     public static var footerNibs: [UICollectionReusableView.Type]? { nil }
+    
+    public var pageablePropertyPath: WritableKeyPath<Self, [Value]>? { nil }
 }
