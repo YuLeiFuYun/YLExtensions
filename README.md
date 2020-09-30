@@ -50,15 +50,8 @@ struct SomeModel: ModelType {
     let someC: [C]
     let someD: [D]
     
-    var data: [[Any]]?
-    
-    init(someA: [A], someB: [B], someC: [C], someD: [D]) {
-        self.someA = someA
-        self.someB = someB
-        self.someC = someC
-        self.someD = someD
-        
-        data = [someA, someB, someC, someD]
+    var data: [[Any]] {
+        return [someA, someB, someC, someD]
     }
 }
 
@@ -112,7 +105,7 @@ override func viewDidLoad() {
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // Note: Only applies when cells of the same type are all together and the different types of cells are in different section.
     let cell = tableView.dequeueReusableCell(for: indexPath, with: SomeModel.tAll!)
-    cell.configure(someModel.data![indexPath.section][indexPath.row])
+    cell.configure(someModel.data[indexPath.section][indexPath.row])
     return cell
 }
 ```
